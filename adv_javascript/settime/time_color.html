@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+        <button onclick="handle_click()">Slow ON</button>
+    <script>
+        function handle_click() {
+            let color = document.getElementById("main");
+            setTimeout(function() {
+                color.style.backgroundColor = "red";
+                setTimeout(function() {
+                color.style.backgroundColor = "";
+            }, 4000)
+            }, 2000); 
+        }
+    </script>
+</body>
+</html>

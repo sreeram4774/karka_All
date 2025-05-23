@@ -1,0 +1,44 @@
+/* </> = tag selector  */
+/* * = universel selector */
+/* .text = class name */
+/* #text = Id name */
+
+/* h1{
+    background-color: aquamarine;
+}
+h2{
+    background-color: blueviolet;
+} */
+
+/* 
+*{
+    background-color: brown;
+} */
+
+/* .text{
+    background-color: cadetblue;
+} */
+
+/* #text1{
+    background-color: chartreuse;
+} */
+
+/* .bloom{
+    background-color: cornflowerblue;
+}
+
+.althaf{
+    background-color: red;
+} */
+
+
+/* #karka{
+    background-color: darkorchid;
+} */
+
+
+/* h1{
+    color:red;
+    border: 5px double blue;
+} */
+

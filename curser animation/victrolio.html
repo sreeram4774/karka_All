@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cursor Follower</title>
+    <style>
+        .cursor-follower {
+            position: fixed;
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            z-index: 10000;
+            transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 
+                        0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 
+                        0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background;
+            user-select: none;
+            pointer-events: none;
+            transform: translate(2px, 2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-follower"></div>
+
+    <script>
+        document.addEventListener('mousemove', function(event) {
+            const cursorFollower = document.querySelector('.cursor-follower');
+            cursorFollower.style.top = `${event.clientY - 15}px`; // Centering the follower
+            cursorFollower.style.left = `${event.clientX - 15}px`; // Centering the follower
+        });
+    </script>
+</body>
+</html>

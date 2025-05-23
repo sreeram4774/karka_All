@@ -1,0 +1,11 @@
+[{
+    "Tiruchy":
+        {"district":["a","b","c"]},
+    "Madurai":{
+        "district":["d","e","f"]
+    },
+    "Kannyakumari":{
+        "district":["g","h","j"]
+    }
+    
+}]

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">one</label>
+        <input type="checkbox" name="" id="" class="one" value="one">
+        <label for="">two</label>
+        <input type="checkbox" name="" id="" class="one" value="two">
+        <label for="">three</label>
+        <input type="checkbox" name="" id="" class="one" value="three">
+        <button onclick="handle_click(event)">click</button>
+    </form>
+    <ol id="oder"></ol>
+    <script>
+        function handle_click(e){
+            e.preventDefault()
+            var value=document.getElementsByClassName("one")
+            var result=document.getElementById("oder")
+            result.innerHTML=""
+            for(let i=0;i<value.length;i++){
+                if(value[i].checked){
+                    var create=document.createElement("li")
+                    create.textContent=value[i].value
+                    result.appendChild(create)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

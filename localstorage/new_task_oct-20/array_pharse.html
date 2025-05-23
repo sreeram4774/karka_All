@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one"></div>
+    <script>
+        let array={name:"sree",age:24,work:"it"}
+        localStorage.setItem("array", JSON.stringify(array));
+        let get=JSON.parse(localStorage.getItem("array"))
+        let b=document.getElementById("one")
+        // for(let key in get){
+        //     let a=document.createElement("p")
+        //     a.innerHTML=`${key}:${get[key]}`
+        //     b.appendChild(a)
+        // }
+        
+        console.log(get)
+    </script>
+</body>
+</html>

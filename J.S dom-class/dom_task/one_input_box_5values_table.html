@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="input">
+    <button onclick="submit()">click</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>product</th>
+                <th>Price</th>
+                <th>Students</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody id="body">
+            
+        </tbody>
+    </table>
+    <script>
+        function submit(){
+            let serial =1
+
+            let row=document.createElement("tr")
+            let body=document.getElementById("body")
+            let first_input=document.getElementById("input").value
+            document.getElementById("input").value=""
+
+            let first_data=document.createElement("td")
+            first_data.innerHTML=serial++
+            row.appendChild(first_data)
+
+            let second_data=document.createElement("td")
+            second_data.innerHTML=first_input
+            row.appendChild(second_data)
+
+            let third_data=document.createElement("td")
+            third_data.innerHTML=first_input
+            row.appendChild(third_data)
+
+            let fourth_data=document.createElement("td")
+            fourth_data.innerHTML=first_input
+            row.appendChild(fourth_data)
+
+            let fifth_data=document.createElement("td")
+            fifth_data.innerHTML=first_input
+            row.appendChild(fifth_data)
+            body.appendChild(row)
+        }
+    </script>
+</body>
+</html>

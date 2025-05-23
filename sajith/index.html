@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .section{
+            height: 600px;
+            border: 2px solid black;
+            display: flex;
+            width: auto;
+         
+        }
+        .box1{
+            background-color: cadetblue;
+            height: 540px;
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+     
+        @media only screen and (min-width:481px) and (max-width:768px){
+            .section{
+                display: flex;
+                width:100%;
+                flex-direction: column;
+                
+            }
+            .content{
+                display: flex;
+                justify-content:center;
+            }
+            p{
+                width: 50%;
+                
+            }
+            .img{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                
+            }
+            img{
+                width: 200px;
+            }
+            .box1{
+                width: 100%;
+                display: flex;
+                /* justify-content: space-around; */
+                align-items: center;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            .img_content{
+            display: flex;
+            height: 540px;
+        }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header" style="height: 100px;background-color: aqua;display: flex;justify-content: center;align-items: center;">
+            <p>HEADER</p>
+        </div>
+        <div class="header" style="height: 100px;background-color: aqua;display: flex;justify-content: center;align-items: center;margin-top: 10px;">
+            <p>NAV</p>
+        </div>
+        <div class="section">
+            <div class="box1" >
+                <div class="img" >
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.HxV79tFMPfBAIo0BBF-sOgHaEy%26pid%3DApi&f=1&ipt=4b510eb795874f2069eafa06a09d172b646bc6c7c03cbe52cca8d5c0b40ce583&ipo=images" alt="">
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum maiores Voluptatem odit, alias corporis laboriosam harum provident</p>
+                </div>    
+            </div>
+            <div class="box1" >
+                <div class="img" >
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.HxV79tFMPfBAIo0BBF-sOgHaEy%26pid%3DApi&f=1&ipt=4b510eb795874f2069eafa06a09d172b646bc6c7c03cbe52cca8d5c0b40ce583&ipo=images" alt="">
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum maiores Voluptatem odit, alias corporis laboriosam harum provident</p>
+                </div>    
+            </div>
+            <div class="box1" >
+                <div class="img" >
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.HxV79tFMPfBAIo0BBF-sOgHaEy%26pid%3DApi&f=1&ipt=4b510eb795874f2069eafa06a09d172b646bc6c7c03cbe52cca8d5c0b40ce583&ipo=images" alt="">
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum maiores Voluptatem odit, alias corporis laboriosam harum provident</p>
+                </div>    
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>

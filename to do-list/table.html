@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+</head>
+<body>
+    <input type="text" id="product" placeholder="Enter product">
+    <button onclick="addRow()">Add</button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>s.no</th>
+                <th>Product</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+
+    <script>
+        let count = 1;
+
+        function addRow() {
+            let productValue = document.getElementById('product').value;
+            if (productValue) {
+                let newRow = document.createElement('tr');
+                
+                let serialCell = document.createElement('td');
+                serialCell.textContent = count++;  
+                newRow.appendChild(serialCell);
+
+           
+                let productCell = document.createElement('td');
+                productCell.textContent = productValue; 
+                newRow.appendChild(productCell);
+
+                let actionCell = document.createElement('td');
+                let deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';  
+                deleteButton.onclick = function () {
+                    deleteRow(this);  
+                };
+                actionCell.appendChild(deleteButton);
+                newRow.appendChild(actionCell);
+
+                document.getElementById('table-body').appendChild(newRow);
+
+                document.getElementById('product').value = '';
+            } 
+            else {
+                alert('Please enter a product.');
+            }
+        }
+
+        function deleteRow(button) {
+            button.parentElement.parentElement.remove();
+        }
+    </script>
+</body>
+</html>

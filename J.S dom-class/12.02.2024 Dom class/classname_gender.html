@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Gender : </label>
+        <input type="radio" name="gender" class="gen" value="Male">
+        <label for="">Male</label>
+        <input type="radio" name="gender" class="gen" value="Female">
+        <label for="">Female</label>
+        <input type="radio" name="gender" class="gen" value="Others">
+        <label for="">Others</label>
+        <button onclick="handle_click(event)">click</button>
+    </form>
+    <div id="div">
+        
+    </div>
+    <script>
+        function handle_click(e){
+            e.preventDefault()
+            var output=document.getElementsByClassName("gen")
+            var div=document.getElementById("div")
+            for(let i=0;i<output.length;i++){
+                if(output[i].checked){
+                    b=output[i].value
+                    console.log(b)
+                }
+            }
+            var create=document.createElement("span")
+            create.textContent=b
+            div.innerText=b   
+        }
+    </script>
+</body>
+</html>

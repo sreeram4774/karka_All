@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="buttons">
+            <button class="btn" onclick="handle_click(event)">One</button>
+            <button class="btn" onclick="handle_click(event)">Two</button>
+            <button class="btn" onclick="handle_click(event)">Three</button>
+            <button class="btn" onclick="handle_click(event)">Four</button>
+            <button class="btn" onclick="handle_click(event)">Five</button>
+        </div>
+    </div>
+</body>
+<script>
+    function handle_click(event) {
+        var text = event.target.innerText; // Get button text
+
+        switch (text) {
+            case "One":
+                console.log("You clicked One");
+                break;
+            case "Two":
+                console.log("You clicked Two");
+                break;
+            case "Three":
+                console.log("You clicked Three");
+                break;
+            case "Four":
+                console.log("You clicked Four");
+                break;
+            case "Five":
+                console.log("You clicked Five");
+                break;
+            default:
+                console.log("Unknown button clicked");
+        }
+    }
+</script>
+</html>

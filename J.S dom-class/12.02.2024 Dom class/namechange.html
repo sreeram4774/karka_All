@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="submit()">Click</button>
+    <p id="text" style="display: none;">Hi</p>
+    <input type="text" id="text">
+    
+</body>
+<script>
+    function submit(){
+        var a=document.getElementById("text")
+        var b=document.getElementById("text").value
+        // a.innerHTML=("<h1>hello</h1>")
+        // a.innerHTML="<h1>`${b}`</h1>
+        a.innerText="hello"
+        // a.textContent="hi buddy"
+        // a.style.display="block"
+        
+    }
+</script>
+</html>

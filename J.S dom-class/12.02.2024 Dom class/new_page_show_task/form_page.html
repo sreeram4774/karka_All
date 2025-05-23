@@ -1,0 +1,173 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       select option{
+            font-size: medium;
+            font-weight: 500;
+       }
+    
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">Email <input name="Email" type="email" placeholder="Email" class="text"></label><br><br>
+        <label for="">Password  <input type="password" placeholder="Password" class="text" id="text1" name="Password"></label><br><br><input onclick="handle_click1()"
+            type="checkbox" name="" id=""> <Label>Show Password</Label><br><br>
+        <label for="" name="gender" >Gender : </label>
+        <input type="radio" name="gender" class="text" value="Male"> <label for="male">Male</label>
+        <input type="radio" name="gender" class="text" value="Female"> <label for="female">Female</label>
+        <input type="radio" name="gender" class="text" value="Other"> <label for="other">Other</label><br><br>
+        <label for="" name="Skills">Skills : 
+        <input type="checkbox" value="HTML" class="text" name="skills"> <label for="html">HTML</label>
+        <input type="checkbox" value="CSS" class="text" name="skills"> <label for="css">CSS</label>
+        <input type="checkbox" value="JAVASCRIPT" class="text" name="skills"> <label for="javascript">JAVASCRIPT</label>
+        <input type="checkbox" value="REACT" class="text" name="skills"> <label for="react">REACT</label></label>  
+        <br><br>
+        <select style="padding: 7px;" name="district" id="text" class="text">
+            <option value="">----Select Your District----</option>
+            <option value="KannyaKumari">KannyaKumari</option>else {  
+                formData[data.name]=data.value
+            }
+            <option value="Chennai">Chennai</option>
+            <option value="Madurai">Madurai</option>
+            <option value="Tiruchy">Tiruchy</option>
+        </select>
+        <br>
+        <br>
+        <button style="background-color: aqua;padding: 5px; cursor: pointer;" onclick="handle_click(event)">Submit</button>
+    </form>
+    <script>
+        function handle_click(e){
+            e.preventDefault()
+            var result=[]
+            var value=document.querySelectorAll(".text")
+            for(let i=0;i<value.length;i++){
+                if(value.type !== "radio" && value.type !== "checkbox"){
+                        if(value.type.checked ==true){
+                            result.push(value)
+
+                        }
+                        else{
+                            result.push(value[i])
+                        }
+                    }
+                }
+                console.log(result)
+
+            }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- New Method -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+    <style>
+        select option {
+            font-size: medium;
+            font-weight: 500;
+        }
+
+        form {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        button {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="email">Email</label>
+        <input id="email" name="Email" type="email" placeholder="Email" class="text"><br><br>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password" class="text" name="Password">
+        <input onclick="handle_click1()" type="checkbox" id="show-password">
+        <label for="show-password">Show Password</label><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" class="text" value="Male" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" class="text" value="Female" id="female">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" class="text" value="Other" id="other">
+        <label for="other">Other</label><br><br>
+
+        <label>Skills:</label>
+        <input type="checkbox" value="HTML" class="text" name="skills" id="html">
+        <label for="html">HTML</label>
+        <input type="checkbox" value="CSS" class="text" name="skills" id="css">
+        <label for="css">CSS</label>
+        <input type="checkbox" value="JavaScript" class="text" name="skills" id="javascript">
+        <label for="javascript">JavaScript</label>
+        <input type="checkbox" value="React" class="text" name="skills" id="react">
+        <label for="react">React</label><br><br>
+
+        <label for="district">District:</label>
+        <select name="district" id="district" class="text">
+            <option value="">----Select Your District----</option>
+            <option value="Kanyakumari">Kanyakumari</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Madurai">Madurai</option>
+            <option value="Tiruchy">Tiruchy</option>
+        </select><br><br>
+
+        <button style="background-color: aqua; padding: 5px; cursor: pointer;" onclick="handle_click(event)">Submit</button>
+    </form>
+
+    <script>
+        function handle_click1() {
+            const passwordField = document.getElementById("password");
+            passwordField.type = passwordField.type === "password" ? "text" : "password";
+        }
+
+        function handle_click(event) {
+            event.preventDefault();
+            const formData = {};
+
+            const inputs = document.querySelectorAll(".text");
+
+            inputs.forEach(input => {
+                if (input.type === "radio" && input.checked) {
+                    formData[input.name] = input.value;
+                } else if (input.type === "checkbox" && input.checked) {
+                    if (!formData[input.name]) {
+                        formData[input.name] = [];
+                    }
+                    formData[input.name].push(input.value);
+                } else if (input.type !== "radio" && input.type !== "checkbox") {
+                    formData[input.name] = input.value.trim();
+                }
+            });
+
+            console.log(formData);
+        }
+    </script>
+</body>
+
+</html>

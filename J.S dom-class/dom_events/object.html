@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text"></p>
+</body>
+<script>
+    var a=document.getElementById("text")
+    var product={
+        name:"sreeram",
+        dob:"13,04,2024",
+        skill:["html","css"],
+        greet:function(){
+            console.log("hi")
+        }
+
+    }
+    a.innerHTML=`Name : ${product.name}`
+    console.log(product.name,product.dob)
+    console.log(product.greet())
+</script>
+</html>

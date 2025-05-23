@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="first">
+    <input type="date" id="second">
+    <input type="text" id="third">
+    <button onclick="handle_click()">click</button>
+    <script>
+        function handle_click(){
+        var a=document.getElementById("first").value
+        var b=document.getElementById("second").value
+        var c=document.getElementById("third").value
+        const persons={
+            name:a,
+            dob:b,
+            number:c,
+        }
+        console.log(persons.name)
+        }
+    </script>
+</body>
+</html>

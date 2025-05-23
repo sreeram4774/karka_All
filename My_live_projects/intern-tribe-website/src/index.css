@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#verified-companies,
+#pricing {
+  scroll-margin-top: 55px;
+  /* Adjust this value based on your AppBar's height */
+}
+
+#ai-career {
+  scroll-margin-top: 75px;
+  /* Adjust this value based on your AppBar's height */
+}

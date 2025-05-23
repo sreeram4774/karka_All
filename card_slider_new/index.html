@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Example</title>
+    <style>
+        .myswiper {
+            position: relative;
+            padding-bottom: 40px;
+        }
+        img {
+            width: 100%;
+        }
+        .card {
+            padding: 0 8px;
+            overflow: hidden;
+        }
+        .card__title {
+            text-align: center;
+            transition: opacity .3s;
+        }
+        .swiper-slide:not(.swiper-slide-active) .card__title {
+            opacity: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="myswiper">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="https://picsum.photos/800/600?random=1" alt="">
+                            <h2 class="card__title">Slide 1</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="https://picsum.photos/800/600?random=2" alt="">
+                            <h2 class="card__title">Slide 2</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="https://picsum.photos/800/600?random=3" alt="">
+                            <h2 class="card__title">Slide 3</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="https://picsum.photos/800/600?random=4" alt="">
+                            <h2 class="card__title">Slide 4</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="https://picsum.photos/800/600?random=5" alt="">
+                            <h2 class="card__title">Slide 5</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints:{
+                1024: {
+              slidesPerView: 3,
+          },
+          481:{
+              slidesPerView: 2,
+          },
+          425:{
+              slidesPerView: 1,
+          },
+               
+            }
+        });
+    </script>
+</body>
+</html>

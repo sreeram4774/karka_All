@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="handle_click()">click</button>
+    <p id="text">34</p>
+    <input type="text" name="" id="text1">
+    <input type="text" name="" id="text2">
+
+
+    <script>
+        function handle_click(){
+            var a=document.getElementById("text")
+            var b=Number(document.getElementById("text1").value)
+            var c=Number(document.getElementById("text2").value)
+            a.innerHTML=b+c
+        }
+    </script>
+</body>
+</html>

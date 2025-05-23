@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text1" onchange="handle_click()" id="text1">
+    <p id="text"></p>
+    <script>
+        function handle_click(){
+            var a=document.getElementById("text")
+            var b=document.getElementById("text1").value
+            a.innerHTML=b
+            document.getElementById("text1").value=""
+           
+        }
+    </script>
+</body>
+</html>

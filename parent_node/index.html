@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        Hello World
+    </div>
+    
+    <script>
+        var textNode = document.getElementById("parent").firstChild;
+        console.log(textNode.parentElement); 
+    </script>
+    
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <p id="child">This is a child element</p>
+    </div>
+    
+    <script>
+        var parent = document.getElementById("parent");
+        console.log(parent.firstChild); 
+        console.log(parent.firstElementChild)
+    </script>
+</body>
+</html> -->

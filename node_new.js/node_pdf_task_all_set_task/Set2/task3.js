@@ -1,0 +1,10 @@
+let array=[1,2,3,4,5]
+console.log(array[0])
+console.log(array[1])
+console.log(array[2])
+console.log(array[3])
+console.log(array[4])
+// array.pop()
+// array.push(7)
+let b=array.slice(0,4)
+console.log(b)

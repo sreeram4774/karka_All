@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="value">
+    <button onclick="handle_click()">click</button>
+    <script>
+        function handle_click(){
+            var a=document.getElementById("value").value
+            localStorage.setItem("name",a)
+        }
+        // localStorage.removeItem("name")
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Values</title>
+</head>
+<body>
+    <input type="text" class="input-box" id="input1">
+    <input type="text" class="input-box" id="input2">
+    <input type="text" class="input-box" id="input3">
+    <div id="div">
+
+    </div>
+    <button onclick="getInputValues()">Get Values</button>
+
+<script>
+    function getInputValues() {
+    const inputs = document.getElementsByClassName('input-box')
+    var div=document.getElementById("div")
+    for(let i=0;i<inputs.length;i++){
+        var c=document.createElement("p")
+        c.innerHTML=inputs[i].value
+        div.appendChild(c)
+
+    }
+    
+
+}
+</script>
+</body>
+</html>

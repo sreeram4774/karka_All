@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Background</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        button{
+            border: none;
+            background: none;
+        }
+    </style>
+</head>
+<body id="body">
+    <button onclick="handle_click(true)" id="btn1"><i class="fa-solid fa-toggle-off fa-4x"></i></button>
+    <button onclick="handle_click(false)" style="display: none;" id="btn2"><i class="fa-solid fa-toggle-on fa-4x"></i></button>
+
+    <script>
+        function handle_click(toggle) {
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            var body = document.getElementById("body");
+
+            if (toggle) {
+                body.style.backgroundColor = "red"; 
+                btn1.style.display = "none";        
+                btn2.style.display = "block";      
+            } else {
+                body.style.backgroundColor = "white"; 
+                btn1.style.display = "block";        
+                btn2.style.display = "none";         
+            }
+        }
+    </script>
+</body>
+</html>

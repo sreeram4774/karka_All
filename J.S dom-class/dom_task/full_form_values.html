@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+</head>
+<body>
+    <form action="">
+        <label>Email : <input type="email" placeholder="Email" class="text" name="email"></label><br><br>
+        <label>Password : <input type="password" placeholder="Password" class="text" name="password"></label><br><br>
+        <!-- <input onclick="handle_click1()" type="checkbox" id="showPassword"> <label for="showPassword">Show Password</label><br><br> -->
+        
+        <label>Gender : </label>
+        <input type="radio" name="gender" class="text" value="Male"> <label>Male</label>
+        <input type="radio" name="gender" class="text" value="Female"> <label>Female</label>
+        <input type="radio" name="gender" class="text" value="Other"> <label>Other</label><br><br>
+        
+        <label>Skills : </label>
+        <input type="checkbox" value="HTML" class="text"> <label>HTML</label>
+        <input type="checkbox" value="CSS" class="text"> <label>CSS</label>
+        <input type="checkbox" value="JavaScript" class="text"> <label>JavaScript</label>
+        <input type="checkbox" value="React" class="text"> <label>React</label>
+        <br><br>
+        
+        <label>District :</label>
+        <select style="padding: 7px;" name="district" class="text">
+            <option value="">--Select Your District--</option>
+            <option value="KannyaKumari">KannyaKumari</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Madurai">Madurai</option>
+            <option value="Tiruchy">Tiruchy</option>
+        </select>
+        <br><br>
+        <button type="submit" style="background-color: aqua; padding: 5px; cursor: pointer;" onclick="handle_click(event)">Submit</button>
+    </form>
+    <div id="output">
+
+    </div>
+    <script>
+        function handle_click(event) {
+            event.preventDefault(); 
+            let allInputs = document.querySelectorAll(".text");
+            let div = document.getElementById("output");
+            div.innerHTML = ""; 
+            for (let i = 0; i < allInputs.length; i++) {
+                let input = allInputs[i];
+                if ((input.type === "radio" && input.checked) || (input.type === "checkbox" && input.checked) || (input.type !== "radio" && input.type !== "checkbox")) {
+                    let para = document.createElement("p");
+                    para.innerHTML = input.value;
+                    div.appendChild(para); 
+                }
+            }
+        }
+    </script>
+</body>
+</html>

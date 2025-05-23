@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="text">
+    <button onclick="handle_click()">click</button>
+    <script>
+        function handle_click(){
+            var value=document.getElementById("text").value
+            localStorage.setItem("values",JSON.stringify(value))
+            var result=JSON.parse(localStorage.getItem("values"))
+            console.log(result)
+        }
+    </script>
+</body>
+</html>

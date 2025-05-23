@@ -1,0 +1,61 @@
+.footer{
+    height: 600px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+.farm{
+    width: 20%;
+    border: 2px solid black;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
+.input1{
+    width: 55%;
+    padding:10px;
+    height: 60px;
+    border-radius: 30px;
+    position: relative;
+    max-width: 600px;
+    
+    
+}
+.btns{
+    position: absolute;
+    
+
+    
+    
+}
+.input{
+    width: 100%;
+    border: 2px solid black;
+    height: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+.text{
+    display: flex;
+    width: 95%;
+}
+.icon{
+    width: 20%;
+    border: 2px solid black;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ 
+}
+

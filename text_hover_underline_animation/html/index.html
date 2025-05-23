@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        a {
+            position: relative;
+            text-decoration: none;
+            color: black;
+            display: inline-block; 
+            transition: transform 0.3s ease; 
+        }
+
+        a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px; 
+            left: 50%;
+            width: 0;
+            height: 2px; 
+            background-color:red;
+            transition: width 0.3s ease, left 0.3s ease; 
+            transform: translateX(-50%); 
+        }
+
+        a:hover {
+            transform: scale(1.1);
+        }
+
+        a:hover::after {
+            width: 100%; 
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Hover over me!</a>
+</body>
+</html>

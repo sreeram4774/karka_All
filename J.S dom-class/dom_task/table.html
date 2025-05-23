@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        input, button {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="text" placeholder="Enter Product Name">
+    <input type="text" id="texts" placeholder="Enter Product Name">
+    <button onclick="submit()">Add Product</button>
+    <table>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Product</th>
+                <th>Price</th>
+
+            </tr>
+        </thead>
+        <tbody id="row">
+        </tbody>
+    </table>
+    
+    <script>
+        let serialNumber = 1; 
+        function submit() {
+            const productName = document.getElementById("text").value;
+            const productNames = document.getElementById("texts").value;
+
+
+        
+            // if (!productName || !productNames) {
+            //     return;
+            // }
+
+            const row = document.getElementById("row");
+
+            
+            const newRow = document.createElement("tr");
+
+            
+            const serialCell = document.createElement("td");
+            serialCell.innerHTML = serialNumber++;
+            newRow.appendChild(serialCell);
+
+
+            
+            const productCell = document.createElement("td");
+            productCell.innerHTML = productName;
+            newRow.appendChild(productCell);
+
+
+              
+            const productCells = document.createElement("td");
+            productCells.innerHTML = productNames;
+            newRow.appendChild(productCells);
+
+            
+            row.appendChild(newRow);
+
+        
+            document.getElementById("text").value = "";
+        }
+    </script>
+</body>
+</html>

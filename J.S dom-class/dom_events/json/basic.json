@@ -1,0 +1,6 @@
+{
+    "person1": { "name": "John", "age": 30 },
+    "person2": { "name": "Alice", "age": 25 },
+    "person3": { "name": "Bob", "age": 40 },
+    "person4": { "name": "Eve", "age": 35 }
+  }

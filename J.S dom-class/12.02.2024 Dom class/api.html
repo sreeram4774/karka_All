@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text">
+    </div>
+    <button onclick="submitData()">Click</button>
+    
+    <script>
+        async function fetchAllUsers() {
+            const url = 'http://192.168.0.169:7001/api/users/allUsers'; 
+
+            try {
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching the users:', error);
+            }
+        }
+
+        async function submitData() {
+            var a = document.getElementById("text"); 
+            const data = await fetchAllUsers(); 
+            if (data) {
+                a.innerHTML = JSON.stringify(data, null, 2); 
+            } else {
+                a.innerHTML = 'Error fetching data';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.text{
+  background-color: aqua;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text1{
+  /* background-color: blueviolet; */
+  border: 2px solid black;
+  height: 500px;
+  display: flex;
+}
+.text2{
+  height: 500px;
+  width: 50%;
+  /* background-color: rgb(217, 0, 255); */
+
+}
+.text3{
+  height: 500px;
+  width: 50%;
+  /* background-color: rgb(255, 77, 0); */
+}

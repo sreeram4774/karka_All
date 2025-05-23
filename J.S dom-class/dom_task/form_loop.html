@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+       <label for="">Email :</label> <input type="text" id="email">
+       <label for="">Number :</label>  <input type="text" id="number">
+       <label for="">password :</label>  <input type="text" id="password">
+       <label for="">Name :</label> <input type="text" id="name">
+       <div id="div">
+       </div>
+       <button onclick="handle_click(event)">submit</button>
+    </form>
+    <script>
+        function handle_click(e){
+            e.preventDefault()
+            var array=[]
+            var email=document.getElementById("email").value
+            var number=document.getElementById("number").value
+            var password=document.getElementById("password").value
+            var name=document.getElementById("name").value
+            var div=document.getElementById("div")
+            array.push(email,number,password,name)
+            for(let i=0;i<array.length;i++){
+                let p=document.createElement("p")
+                p.innerHTML=array[i]
+                div.appendChild(p)
+            }
+        }
+    </script>
+</body>
+</html>

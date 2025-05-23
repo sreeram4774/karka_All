@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+</head>
+<body>
+    <form action="">
+        <label for="email">Email :</label>
+        <input type="email" class="text" id="email">
+        
+        <label for="password">Password :</label>
+        <input type="password" class="text" id="password">
+        
+        <button onclick="handle_click(event)">Submit</button>
+    </form>
+
+    <script>
+        let details = []; 
+
+        function handle_click(e) {
+            e.preventDefault();
+            var inputs = document.querySelectorAll(".text");
+
+            let obj = {}; 
+
+            let keys = ["Email", "Password"]; 
+
+            for (let i = 0; i < inputs.length; i++) {
+                obj[keys[i]] = inputs[i].value; 
+
+            details.push(obj);  
+            console.log(details); 
+        }
+    }
+    </script>
+</body>
+</html>

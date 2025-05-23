@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <p id="text"></p>
+    <button onclick="submit()">click</button>
+    <button onclick="deletes()">delete</button>
+    <button onclick="edit()">edit</button>
+
+    <script>
+        function submit(){
+            var a =document.getElementById("text")
+            var result=document.getElementById("input").value
+            a.innerHTML=result
+            document.getElementById("input").value=""
+        }
+        function deletes(){
+            var a=document.getElementById("text")
+            a.innerHTML=""
+        }
+      
+    </script>
+</body>
+</html>

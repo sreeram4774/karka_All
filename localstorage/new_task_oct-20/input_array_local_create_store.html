@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <button onclick="handle_click()">click</button>
+    <script>
+        function handle_click() {
+            var input = document.getElementById("text").value;
+
+            var itemArray = localStorage.getItem("item") ? JSON.parse(localStorage.getItem("item")) : [];
+
+            itemArray.push(input);
+
+            localStorage.setItem("item", JSON.stringify(itemArray));
+
+            console.log(itemArray);
+        }
+    </script>
+</body>
+</html>

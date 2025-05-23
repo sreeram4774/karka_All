@@ -1,0 +1,13 @@
+{
+    "product":{
+        "name":"apple",
+        "price":"100",
+        "weight":"5kg"
+    },
+    "person":{
+        "name":"sreeram",
+        "age":24,
+        "number":"1234567"
+    }
+    
+}

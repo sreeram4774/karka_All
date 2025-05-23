@@ -1,0 +1,107 @@
+.row1{
+    background-color: rgba(64, 56, 56, 0.814);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color:white;
+    transition: transform 0.3s ease; 
+}
+.img{
+    width: 80%;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; 
+    left: 50%;
+    width:0;
+    height: 2px; 
+    background-color:white;
+    transition: width 0.3s ease, left 0.3s ease; 
+    transform: translateX(-50%);
+}
+
+a:hover {
+    transform: scale(1.1); 
+}
+
+a:hover::after {
+    width: 100%; 
+    left: 50%;
+}
+
+.background{
+    height: 400px;
+    background-color: aliceblue;
+
+}
+.learn{
+    background-color: orange;
+    padding: 5px 30px;
+}
+
+
+@media only screen and (min-width:320px) and (max-width:480px){
+    .bloom{
+        text-align: center;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .row1{
+        height: auto;
+    }
+    
+    .background{
+        height: auto;
+        background-color: aliceblue;
+    
+    }
+    .button2{
+        
+    }
+  
+
+   
+
+
+}   
+
+@media only screen and (max-width:1024px){
+    .photo1{
+        display: none;
+    }
+    .text{
+        margin-top: 20px!important;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .button1{
+        width:auto;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .background{
+        height: auto;
+        background-color: aliceblue;
+    
+    }
+    
+
+}
+@media only screen and (min-width:1025px){
+    .photo{
+        display: none;
+    }
+
+}
+
